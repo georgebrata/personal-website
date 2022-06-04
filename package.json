@@ -6,7 +6,7 @@
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
-    "generate": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt generate"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
