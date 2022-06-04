@@ -42,6 +42,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.georgebrata.ro
-          username: deploy
+          username: deploy@georgebrata.ro
           password: ${{secrets.FTP_PASSWORD}}
           local-dir: ./dist/
