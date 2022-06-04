@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Overpass";
+  src: local("Overpass"),
+   url(~assets/fonts/Overpass-Regular.ttf) format("truetype");
+}
+
+html {
+  font-family: "Overpass";
+}
+
+.nuxt-link-exact-active {
+  @apply text-blue-500;
+}
