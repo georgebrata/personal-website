@@ -44,4 +44,4 @@ jobs:
           server: ${{secrets.FTP_SERVER}}
           username: ${{secrets.FTP_USERNAME}}@{{secrets.FTP_SERVER}}
           password: ${{secrets.FTP_PASSWORD}}
-          local-dir: ./site
+          local-dir: ./dist/
