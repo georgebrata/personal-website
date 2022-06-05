@@ -7,7 +7,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 1"
+        v-show="clickIndex === 1"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'2.png'"
@@ -15,7 +15,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 2"
+        v-show="clickIndex === 2"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'3.png'"
@@ -23,7 +23,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 3"
+        v-show="clickIndex === 3"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'4.png'"
@@ -31,7 +31,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 4"
+        v-show="clickIndex === 4"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'5.png'"
@@ -39,7 +39,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 5"
+        v-show="clickIndex === 5"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'6.png'"
@@ -47,7 +47,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 6"
+        v-show="clickIndex === 6"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'7.png'"
@@ -55,7 +55,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 7"
+        v-show="clickIndex === 7"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'8.png'"
@@ -63,7 +63,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
         @click="incrementIndex"
-        v-if="clickIndex === 8"
+        v-show="clickIndex === 8"
       />
       <nuxt-img
         :src="siteMetadata.author_image+'9.png'"
@@ -71,7 +71,7 @@
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full"
         @click="incrementIndex"
-        v-if="clickIndex === 9"
+        v-show="clickIndex === 9"
       />
       <div class="sm:mx-7 ml-2 justify-center items-center">
         <h1
