@@ -16,7 +16,7 @@ $ npm run dev
 
 ```
 
-For detailed explanation on how things work, check out the [Nuxt.js documentation](https://nuxtjs.org).
+For detailed explanation on how things work, check out the [Nuxt.js documentation here](https://nuxtjs.org).
 
 
 ## Spacial Thanks to
