@@ -5,7 +5,9 @@
         {{items[0] && items[0].title}}
       </h2>
       <div>
-      <DownloadCvBtn file="/BrataGeorgeCV.pdf" name="BrataGeorgeCV.pdf">Download CV</DownloadCvBtn>
+        <DownloadCvBtn file="/BrataGeorgeCV.pdf" name="BrataGeorgeCV.pdf" class="hidden md:block">Download CV</DownloadCvBtn>
+        <HireMeBtn class="block md:hidden">Hire me</HireMeBtn>
+
       </div>
     </div>
     <p class="mt-8 mb-4 px-2 dark:bg-gray-800 dark:text-blue-200 text-justify" v-for="i in items" :key="i.id">

@@ -70,7 +70,7 @@
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12">
           <Invision class="h-9 w-11" alt="InVision title" title="InVision logo"></Invision>
-          <span>Invision</span>
+          <span>InVision</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12">
           <img class="h-9 w-10" src="~assets/devicon/canva.png" alt="Canva logo" title="Canva title" />

@@ -97,14 +97,12 @@
         <Glob />
         <p class="ml-2">{{ siteMetadata.location }}</p>
       </div>
-      <div class="my-2 text-gray-600 flex dark:text-blue-100">
+      <div class="my-2 text-gray-600 flex dark:text-blue-100 mb-4">
         <Mail />
         <a class="ml-2" target="_blank" :href="`mailto:${siteMetadata.email}`"> {{ siteMetadata.email }}</a>
       </div>
-      <a target="_blank" :href="`mailto:${siteMetadata.email}?subject=I want a cool, modern website. Can you help me?`"><button type="button" class="mt-4 w-full text-white bg-gradient-to-br from-purple-600 to-blue-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-lg text-md px-5 py-2.5 text-center mr-2 mb-2">
-        Hire me
-      </button>
-      </a>
+      <HireMeBtn :fullwidth="true">Hire me</HireMeBtn>
+
 
       <!-- <div class="my-2 text-gray-600 flex dark:text-blue-200">
         <Github />
