@@ -45,7 +45,7 @@
         </p>
       </li>
     </ol>
-    <DownloadCvBtn file="/BrataGeorgeCV.pdf" name="BrataGeorgeCV.pdf" :fullwidth="true">Download complete CV as .pdf</DownloadCvBtn>
+    <DownloadCvBtn file="/BrataGeorgeCV.pdf" name="BrataGeorgeCV.pdf">Download complete CV as .pdf</DownloadCvBtn>
   </div>
 </template>
 

@@ -32,7 +32,7 @@
       };
     },
     head: {
-      title: "George Brata | Projects",
+      title: "George Brata | Portfolio",
       meta: [{
           charset: "utf-8"
         },
@@ -43,7 +43,7 @@
         {
           hid: "description",
           name: "description",
-          content: "Some of Projects developed by George Brata",
+          content: "George Brata's Portfolio as a Web Developer",
         },
       ],
       link: [{

@@ -11,7 +11,7 @@
             </h2>
             <!-- <span class="bg-blue-50 text-yellow-900 text-sm font-medium mr-2 px-2.5 pt-2 rounded ml-3" v-if="item.url">Personal</span>
             <span class="bg-blue-50 text-blue-900 text-sm font-medium mr-2 px-2.5 pt-2 rounded ml-3" v-else>Client Work</span> -->
-            <span v-if="item.year" class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300 ml-4">  
+            <span v-if="item.year" class="hidden xl:block pt-2 bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300 ml-4">  
               {{ item.year }}
             </span>
           </div>
@@ -48,8 +48,8 @@
             </div>
           </div>
         </div>
-        <p class="prose text-gray-500 max-w-none dark:text-gray-400 mb-3">
-          {{ item.description }}
+        <p class="prose text-gray-500 max-w-none dark:text-gray-400 mb-3" v-html="item.description">
+          
         </p>
         <div class="flex flex-row justify-between">
           <div class="text-gray-400 text-sm font-extralight">
