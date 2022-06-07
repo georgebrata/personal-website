@@ -38,6 +38,10 @@
           <Nuxt class="h-10 w-12"></Nuxt>
           <span>Nuxt.js</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('ionic')">
+          <img class="w-9 h-9" src="~assets/devicon/ionic.png" alt="Ionic logo" title="Ionic title" />
+          <span>Ionic</span>
+        </li>
       </ul>
     </div>
     <div class="mt-4" v-if="get('node.js') || get('laravel') || get('docker')">
