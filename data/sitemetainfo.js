@@ -3,13 +3,13 @@ const siteMetaInfo = {
   author: "George Brata",
   author_image: "/author/",
   position: "Web Developer",
-  location: "Cluj-Napoca, Romania",
+  location: "Oradea, Romania",
   headerTitle: "georgebrata.ro",
   slogan: "If it opens in a browser, I can fix it.",
   description:
     "Do you need a cool, modern website that actually sells? Contact me!",
   language: "en-us",
-  theme: "dark", // system, dark or light
+  theme: "system", // system, dark or light
   siteUrl: "https://georgebrata.ro",
   siteRepo: "#",
   siteLogo: "../assets/author-1.png",
