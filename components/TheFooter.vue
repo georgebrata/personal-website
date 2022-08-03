@@ -7,7 +7,7 @@
           target="_blank"
           rel="noopener noreferrer"
           :href="`mailto:${siteMetadata.email}`"
-          ><span class="sr-only">mail</span>
+          ><span class="sr-only">email</span>
           <img class="w-8 h-8" src="~assets/icon/mail.svg" /></a
         >
         <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="i.href" v-for="i in items" :key="i.title">
