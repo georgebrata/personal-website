@@ -11,7 +11,7 @@
       </div>
     </div>
     <p class="mt-8 mb-4 px-2 dark:bg-gray-800 dark:text-blue-200 text-justify" v-for="i in items" :key="i.id">
-      {{i.description}}
+      <span v-html="i.description"></span>
     </p>
   </div>
 </template>
@@ -30,3 +30,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+a:hover {
+  font-weight: bold;
+}
+</style>

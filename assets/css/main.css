@@ -15,3 +15,7 @@ html {
 .nuxt-link-exact-active {
   @apply text-blue-500;
 }
+
+a:hover {
+  font-weight: bold;
+}
