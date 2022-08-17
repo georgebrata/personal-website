@@ -1,5 +1,5 @@
 const siteMetaInfo = {
-  title: "George Brata | Web Developer",
+  title: "George Brata | Developer",
   author: "George Brata",
   author_image: "/author/",
   position: "Frontend Developer",
