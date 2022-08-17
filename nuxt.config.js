@@ -15,6 +15,15 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+        {
+            src: "https://www.googletagmanager.com/gtag/js?id=G-40P7NL2EGP",
+            async: true,
+        },
+        {
+            src: "js/ga.js",
+        }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
