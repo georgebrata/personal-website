@@ -15,7 +15,7 @@ const siteMetaInfo = {
   siteLogo: "../assets/author-1.png",
   image: "~/assets/author-1.png",
   socialBanner: "/static/images/twitter-card.png",
-  email: "george@brata.ro"
+  email: "gmail@georgebrata.ro"
 };
 
 export default siteMetaInfo;
