@@ -100,6 +100,10 @@
           <span>Glide</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/manychat.png" title="Manychat logo" alt="Manychat logo" />
+          <span>Manychat</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
           <img class="w-8 h-10 mb-2" src="~assets/devicon/google-analytics.png" title="Google Analytics logo" alt="Google Analytics logo" />
           <span>Analytics</span>
         </li>
