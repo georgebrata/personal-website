@@ -1,11 +1,11 @@
 const siteMetaInfo = {
-  title: "George Brata | Developer",
+  title: "George Brata 🕸 Developer",
   author: "George Brata",
   author_image: "/author/",
-  position: "Frontend Developer",
+  position: "Frontend 🕸 Developer",
   location: "Romania",
   headerTitle: "georgebrata.ro",
-  slogan: "If it opens in a browser, I can fix it.",
+  slogan: "Talk is cheap; show me the code review",
   description:
     "Do you need a cool, modern website that actually sells? Contact me!",
   language: "en-us",
