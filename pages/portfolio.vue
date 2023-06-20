@@ -26,6 +26,7 @@
 <script>
   // import projectsData from "../data/projects";
   export default {
+    name: "Portfolio",
     data() {
       return {
         items: []
