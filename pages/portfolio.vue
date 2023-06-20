@@ -5,10 +5,10 @@
         Portfolio
       </h1>
       <p class="text-lg leading-7 text-gray-500 dark:text-gray-400 block md:hidden">
-        Some of the projects I've built as a freelancer
+        Some of the projects I've built 
       </p>
       <p class="text-lg leading-7 text-gray-500 dark:text-gray-400 typing hidden md:block">
-        Some of the projects I've built as a freelancer
+        Some of the projects I've built 
       </p>
     </div>
     <main class="relative mb-auto">
