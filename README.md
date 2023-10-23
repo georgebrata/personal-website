@@ -1,6 +1,8 @@
 # personal-website
 A landing page for [my personal website](https://georgebrata.ro) built with Vue.js and Nuxt.js for SSG. Styling is done using Tailwind CSS and it supports Markdown for blog good posts.
 
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/vssp.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
 # Demo
 
 - [Demo website - https://georgebrata.ro](https://georgebrata.ro)
