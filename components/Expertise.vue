@@ -53,6 +53,14 @@
           <Node class="h-9 w-11" alt="Node title" title="Node logo"></Node>
           <span>Node.js</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('express')">
+          <Express class="h-9 w-11" alt="Express title" title="Express logo"></Express>
+          <span>Express.js</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('sequalize')">
+          <Sequalize class="h-9 w-11" alt="Sequalize title" title="Sequalize logo"></Sequalize>
+          <span>Sequalize</span>
+        </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('laravel')">
           <Laravel class="h-9 w-11" alt="Laravel title" title="Laravel logo"></Laravel>
           <span>Laravel</span>
@@ -127,6 +135,9 @@
   import Laravel from "../assets/devicon/laravel.svg?inline";
   import Node from "../assets/devicon/node.svg?inline";
   import Invision from "../assets/devicon/invision.svg?inline";
+  import Sequalize from "../assets/devicon/invision.svg?inline";
+  import Express from "../assets/devicon/invision.svg?inline";
+
   export default {
     components: {
       Javascript,
@@ -138,7 +149,9 @@
       Nuxt,
       Laravel,
       Node,
-      Invision
+      Invision,
+      Sequalize,
+      Express
     },
     data() {
       return {
