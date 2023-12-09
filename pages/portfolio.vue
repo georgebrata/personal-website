@@ -33,7 +33,7 @@
       };
     },
     head: {
-      title: "George Brata | Portfolio",
+      title: "Portfolio | George Brata",
       meta: [{
           charset: "utf-8"
         },
@@ -63,7 +63,7 @@
 </script>
 <style>
 .typing {
-  width: 48ch;
+  width: 32ch;
   animation: typing 2s steps(48), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
