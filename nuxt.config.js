@@ -19,13 +19,18 @@ export default {
         {
             src: "https://www.googletagmanager.com/gtag/js?id=G-40P7NL2EGP",
             async: true,
+            
         },
         {
             src: "js/ga.js",
+        },
+        {
+          src: "https://cdn.counter.dev/script.js",
+          'data-utcoffset': "2",
+          'data-id': "03bd5925-48e2-4d33-ae59-d66aaf6acba0",
         }
     ]
   },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["@/assets/css/main.css"],
 
