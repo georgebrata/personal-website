@@ -45,19 +45,18 @@
     data() {
       return {
         siteMetadata: siteMetaInfo,
-        items: []
+        items: [],
+        API_URL: process.env.apiUrl.concat('?path=socials')
       };
     },
     components: {
       BuyMeACoffee
     },
     async fetch() {
-      this.items = await fetch(
-        'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/georgebrataRo/socials'
-      ).then(res => res.json());
+      this.items = await fetch(this.API_URL).then(res => res.json());
       let visibleItems = [];
-      this.items.socials.forEach(i => {
-        if(i.show === true) {
+      this.items.forEach(i => {
+        if(i.visible) {
           visibleItems.push(i);
         }
       })

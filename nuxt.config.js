@@ -1,7 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-
+  env: {
+    apiUrl: 'https://script.google.com/macros/s/AKfycbyadFq3Dre4OqZJf_0NcJ3qXRbdkFn1FFwUOAo2KX0YH8M3ICs7tR0D6FBMEUzts3E3/exec'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "personal-website",
@@ -73,6 +75,7 @@ export default {
       },
     },
   },
+  
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

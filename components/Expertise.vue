@@ -155,13 +155,14 @@
     },
     data() {
       return {
-        items: []
+        items: [],
+        API_URL: process.env.apiUrl + '?path=expertise'
       };
     },
     methods: {
       get(skill) {
         let sIndex = this.items.findIndex(i => i.title.toLowerCase() === skill.toLowerCase());
-        if(sIndex > -1 && this.items[sIndex].show === true) {
+        if(sIndex > -1 && this.items[sIndex].visible) {
           return this.items[sIndex];
         } else {
           return null;
@@ -169,10 +170,7 @@
       }
     },
     async fetch() {
-      this.items = await fetch(
-        'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/georgebrataRo/expertise'
-      ).then(res => res.json());
-      this.items = this.items.expertise;
+      this.items = await fetch(this.API_URL).then(res => res.json());
     },
   };
 </script>

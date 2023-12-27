@@ -54,13 +54,11 @@ export default {
   data: () => {
     return {
       items: [],
+      API_URL: process.env.apiUrl.concat('?path=experience')
     };
   },
   async fetch() {
-    this.items = await fetch(
-      'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/georgebrataRo/experience'
-    ).then(res => res.json());
-    this.items = this.items.experience;
+    this.items = await fetch(this.API_URL).then(res => res.json());
   },
 };
 </script>

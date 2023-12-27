@@ -91,6 +91,7 @@
             return {
                 items: [],
                 activeIndex: Math.floor(Math.random() * 10) % 5,
+                API_URL: process.env.apiUrl.concat('?path=hobbies')
             };
         },
         head: {
@@ -115,10 +116,7 @@
             }],
         },
         async fetch() {
-            this.items = await fetch(
-                'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/georgebrataRo/projects'
-            ).then(res => res.json());
-            this.items = this.items.projects;
+            this.items = await fetch(this.API_URL).then(res => res.json());
         },
     };
 </script>
