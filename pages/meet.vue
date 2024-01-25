@@ -5,10 +5,10 @@
           Let's meet
         </h1>
         <p class="text-lg leading-7 text-gray-500 dark:text-gray-400 block md:hidden">
-          Schedule a meeting below
+          Schedule a short meeting with me 
         </p>
         <p class="text-lg leading-7 text-gray-500 dark:text-gray-400 typing hidden md:block">
-            Schedule a meeting below
+            Schedule a short meeting with me 
         </p>
       </div>
       <main class="relative mb-auto">
