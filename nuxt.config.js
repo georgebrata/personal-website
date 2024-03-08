@@ -26,9 +26,9 @@ export default {
         {
             src: "js/ga.js",
         },
-        {
-            src: "js/formilla.js",
-        },
+        // {
+        //     src: "js/formilla.js",
+        // },
         {
           src: "https://cdn.counter.dev/script.js",
           'data-utcoffset': "2",
