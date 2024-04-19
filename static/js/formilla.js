@@ -8,7 +8,7 @@
 // script.setAttribute("type", "text/javascript");
 // script.setAttribute("src", src); script.setAttribute("async", true);
 
-// var complete = false;
+// var complete = false; 
 
 // script.onload = script.onreadystatechange = function () {
 //     if (!complete && (!this.readyState
