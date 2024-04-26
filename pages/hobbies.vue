@@ -121,7 +121,7 @@
     };
 </script>
 
-<style>
+<style scoped>
     .typing {
         width: 48ch;
         animation: typing 2s steps(48), blink .5s step-end infinite alternate;
