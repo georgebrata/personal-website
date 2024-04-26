@@ -20,6 +20,7 @@
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'github'" src="~assets/icon/github_new.svg"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.png"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.png"/>
+            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png"/>
         </a>
       </div>
       <div class="flex mb-2 mt-20 space-x-2 text-sm text-gray-500 dark:text-gray-400">
