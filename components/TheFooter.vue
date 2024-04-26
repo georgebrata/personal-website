@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div class="flex flex-col items-center mt-16">
-      <div class="flex flex-wrap justify-between mb-3 gap-4 space-x-4">
+    <div class="flex flex-col items-center mt-8">
+      <div class="flex flex-wrap justify-between mb-4 gap-4 space-x-4">
         <a
           class="text-sm text-gray-500 transition hover:text-gray-600"
           target="_blank"
@@ -23,7 +23,7 @@
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png"/>
         </a>
       </div>
-      <div class="flex mb-2 mt-20 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+      <div class="flex mb-2 mt-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
         <div>Copyright © {{ new Date().getFullYear() }} • <a :href="siteMetadata.siteUrl">{{ siteMetadata.author }}</a
           ></div>       
         </div>
