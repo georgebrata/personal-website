@@ -101,7 +101,7 @@
         <Mail />
         <a class="ml-2" target="_blank" :href="`mailto:${siteMetadata.email}`"> {{ siteMetadata.email }}</a>
       </div>
-      <HireMeBtn :fullwidth="true">Hire me</HireMeBtn>
+      <HireMeBtn :fullwidth="true">Contact me</HireMeBtn>
 
 
       <!-- <div class="my-2 text-gray-600 flex dark:text-blue-200">
