@@ -104,7 +104,8 @@
       <HireMeBtn :fullwidth="true">Contact me</HireMeBtn>
 
 
-      <!-- <div class="my-2 text-gray-600 flex dark:text-blue-200">
+      <!-- 
+        <div class="my-2 text-gray-600 flex dark:text-blue-200">
         <Github />
         <a class="ml-2" :href="siteMetadata.github"> {{ siteMetadata.githubUser }}</a>
       </div> -->
