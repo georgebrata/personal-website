@@ -46,7 +46,7 @@
           {
             hid: "description",
             name: "description",
-            content: "George Brata's Portfolio as a Web Developer",
+            content: "Schedule a meeting with George Brata | Web Developer",
           },
         ],
         link: [{

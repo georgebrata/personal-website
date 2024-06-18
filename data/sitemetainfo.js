@@ -2,7 +2,7 @@ const siteMetaInfo = {
   title: "George Brata | Web Developer",
   author: "George Brata",
   author_image: "/author/",
-  position: "Frontend Web Developer",
+  position: "Web Developer",
   location: "Romania",
   headerTitle: "georgebrata.ro",
   description:
