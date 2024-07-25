@@ -1,17 +1,43 @@
 <template>
+  
   <div class="px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0 mt-10">
-    <p class="text-center font-bold my-5 text-indigo-500">
+    <nav aria-label="breadcrumb">
+      <section class="flex w-full flex-wrap items-center justify-between ">
+    <ol class="flex items-center rounded-md bg-blue-gray-50 bg-opacity-60 pl-2">
+      <li class="flex cursor-pointer items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300">
+        <a class="opacity-60" href="#">
+          <NuxtLink to="." class="text-dark-900">
+            Blog
+            </NuxtLink> 
+        </a>
+        <span class="pointer-events-none mx-2 select-none font-sans text-sm font-normal leading-normal text-blue-gray-500 antialiased">
+          /
+        </span>
+      </li>
+      <li class="flex cursor-pointer items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300">
+        <a href="">
+          {{ shorten(article.title) }}
+        </a>
+      </li>
+    </ol>
+    <p class="w-sm-full text-center font-bold my-5 text-indigo-500">
       {{ formatDate(article.date) }}
     </p>
-    <h1 class="text-4xl text-gray-700 font-extrabold mb-10 text-center">
+    </section>
+
+  </nav>
+    <h1 class="text-4xl mt-10 text-gray-700 font-extrabold mb-10 text-center">
       {{ article.title }}
     </h1>
+    <div v-if="article.readingTime" class="flex items-center font-medium mt-6 sm:mx-3 justify-center">
+      Reading time: {{ article.readingTime }}
+    </div>
     <div class="flex items-center font-medium mt-6 sm:mx-3 justify-center">
       <nuxt-img
         :src="siteMetadata.author_image"
         loading="lazy"
         alt=""
-        class="mr-3 w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800"
+        class="mr-3 w-11 h-11 rounded-full bg-indigo-600 dark:bg-slate-800"
       />
       <div>
         <div class="text-slate-900 dark:text-slate-200">
@@ -19,10 +45,10 @@
         </div>
         <a
           target="_blank"
-          :href="siteMetadata.twitter"
-          class="text-sky-500 hover:text-sky-600 dark:text-sky-400"
+          :href="siteMetadata.siteUrl"
+          class="text-indigo-500 hover:text-indigo-600 dark:text-indigo-400"
         >
-          @{{ siteMetadata.twitter_user }}
+          @{{ siteMetadata.username }}
         </a>
       </div>
     </div>
@@ -55,6 +81,9 @@ export default {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
     },
+    shorten(text, maxLen = 25) {
+      return text.length > maxLen ? text.slice(0, maxLen) + "..." : text;
+    },
   },
   mounted() {
     Prism.highlightAll();
@@ -73,7 +102,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
@@ -84,5 +113,8 @@ export default {
 }
 .nuxt-content p {
   margin-bottom: 20px;
+}
+a:hover {
+  text-decoration: underline;
 }
 </style>

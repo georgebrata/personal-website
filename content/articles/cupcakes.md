@@ -3,7 +3,9 @@ title: Cupcake ipsum dolor. Sit amet pastry cake toffee
 tags: cupcakes, baking
 date: 2019-09-25
 description: Cupcake ipsum dolor. Sit amet pastry cake toffee carrot cake. Cheesecake candy I love dragée cake jelly-o pie. Cheesecake sesame snaps danish lemon drops sesame snaps sugar plum cupcake powder. Cookie sweet wafer. Jelly chocolate cake dragée candy canes halvah.
-image: https://images.unsplash.com/photo-1648737966614-55e58b5e3caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80
+image: https://i.ibb.co/L5cV2nL/undraw-mobile-content-xvgr.png
+author: George Brata
+readingTime: 10min
 draft: true
 ---
 

@@ -1,25 +1,14 @@
 <template>
-  <div>
-    <header class="pt-16 pb-9 sm:pb-16 sm:text-center mb-20">
-      <h1
-        class="mb-24 mt-24 text-4xl sm:text-2xl tracking-tight text-slate-800 font-extrabold dark:text-slate-200"
-      >
-        George's Blog
-      </h1>
-      <p class="text-lg px-2 text-slate-700 dark:text-slate-400 mb-24">
-        coming soon ...
-      </p>
-    </header>
-    <!-- <div class="space-y-16 mx-auto max-w-7xl">
-      <blog-item
-        v-for="article in articles"
-        :key="article.title"
-        :title="article.title"
-        :description="article.description"
-        :date="article.date"
-        :slug="article.slug"
-      ></blog-item>
-    </div> -->
+  <div class="text-gray-900 pt-12 pr-0 pb-14 pl-0 bg-white">
+    <div class="w-full pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
+      <blog-item-large :item="latestArticle" />
+
+      <section v-if="showArticlesCarousel" class="sm:px-5">
+        <vue-horizontal class="horizontal-articles" :displacement="0.5" :button-between="false" ref="articles">
+          <blog-item v-for="article in visibleArticles" :item="article" :key="article.title"/>
+        </vue-horizontal>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -30,19 +19,41 @@ export default {
       .only([
         "title",
         "description",
-        "img",
+        "image",
         "slug",
-        "tag",
+        "tags",
         "author",
         "date",
         "draft",
+        "readingTime"
       ])
       .sortBy("date", "asc")
       .fetch();
+      
+      const visibleArticles = articles.filter((article) => !article.draft);
+      const latestArticle = visibleArticles.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+
+    const categories = [
+      { name: 'VueJS' }, { name: 'Nuxt' }, { name: 'Gridsome' }, { name: 'VuePress' },
+    ]
 
     return {
-      articles,
+      visibleArticles,
+      latestArticle,
+      categories
     };
+
+
+  },
+  computed: {
+    showArticlesCarousel() {
+      return this.visibleArticles && this.visibleArticles.length >= 1;
+    },
+  },
+  methods: {
+    scrollToCategory(i) {
+      this.$refs.categories.scrollToIndex(i)
+    },
   },
   head: {
     title: "George Brata | Blogs",
@@ -59,5 +70,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

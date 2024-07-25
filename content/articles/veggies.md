@@ -1,10 +1,11 @@
 ---
 title: xVeggies es bonus vobis proinde vos postulo essum magis kohlrabi
 tags: veggies, cooking
-date: 2019-09-29
+date: 2022-09-29
 description: Veggies es bonus vobis proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-image: https://images.unsplash.com/photo-1648737966614-55e58b5e3caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80
-author: Md Rathik
+image: https://i.ibb.co/v4W0FDt/undraw-undraw-like-post-dn6g-1-vgik.png
+author: George Brata
+readingTime: 19min
 draft: false
 ---
 
@@ -17,18 +18,6 @@ draft: false
   "age": 25
 }
 ```
-
-P---
-**Advertisement :)**
-
-- **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
-  resize in browser.
-- **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
----
 
 # h1 Heading 8-)
 

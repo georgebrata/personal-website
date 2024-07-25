@@ -40,7 +40,9 @@ export default {
   css: ["@/assets/css/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {src: 'plugins/carousel.js', ssr: false} // Only works on client side
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -85,6 +87,7 @@ export default {
       plugins: {
         tailwindcss: {},
         autoprefixer: {},
+        
       },
     },
   },
