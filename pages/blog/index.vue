@@ -30,12 +30,15 @@ export default {
       .sortBy("date", "asc")
       .fetch();
       
-      const visibleArticles = articles.filter((article) => !article.draft);
+      let visibleArticles = articles.filter((article) => !article.draft);
       const latestArticle = visibleArticles.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+      visibleArticles.shift(1); // remove the latest article from the list
 
     const categories = [
       { name: 'VueJS' }, { name: 'Nuxt' }, { name: 'Gridsome' }, { name: 'VuePress' },
     ]
+    // implement peeking
+    // https://vue-horizontal.fuxing.dev/others/autoplay#peeking
 
     return {
       visibleArticles,
@@ -70,3 +73,30 @@ export default {
   },
 };
 </script>
+
+<style>
+
+@media (min-width: 640px) {
+  .small-article {
+    max-width: calc((100% - (24px)) / 2);
+  }
+}
+
+@media (min-width: 768px) {
+  .small-article {
+    max-width: calc((100% - (2 * 24px)) / 3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .small-article {
+    max-width: calc((100% - (3 * 24px)) / 4);
+  }
+}
+
+@media (min-width: 1280px) {
+  .small-article {
+    max-width: calc((100% - (4 * 24px)) / 5);
+  }
+}
+</style>

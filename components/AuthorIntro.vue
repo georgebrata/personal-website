@@ -27,11 +27,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-a {
-  text-decoration: underline;
-}
-a:hover {
-  font-weight: bold;
-}
-</style>

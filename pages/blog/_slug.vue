@@ -3,10 +3,10 @@
   <div class="px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0 mt-10">
     <nav aria-label="breadcrumb">
       <section class="flex w-full flex-wrap items-center justify-between ">
-    <ol class="flex items-center rounded-md bg-blue-gray-50 bg-opacity-60 pl-2">
+    <ol class="flex items-center rounded-md bg-blue-gray-50 bg-opacity-60">
       <li class="flex cursor-pointer items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300">
         <a class="opacity-60" href="#">
-          <NuxtLink to="." class="text-dark-900">
+          <NuxtLink to="." class="text-dark-200">
             Blog
             </NuxtLink> 
         </a>
@@ -15,7 +15,7 @@
         </span>
       </li>
       <li class="flex cursor-pointer items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300">
-        <a href="">
+        <a href="" class="text-dark-500">
           {{ shorten(article.title) }}
         </a>
       </li>
@@ -57,7 +57,7 @@
       :src="article.image"
     />
 
-    <nuxt-content class="prose min-w-full p-10 mx-auto" :document="article" />
+    <nuxt-content class="prose min-w-full mx-auto" :document="article" />
   </div>
 </template>
 <script>
@@ -113,8 +113,5 @@ export default {
 }
 .nuxt-content p {
   margin-bottom: 20px;
-}
-a:hover {
-  text-decoration: underline;
 }
 </style>
