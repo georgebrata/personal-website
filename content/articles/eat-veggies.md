@@ -16,6 +16,8 @@ Eating vegetables is always a good idea for the following reasons:
 - Packed with essential nutrients
 - Aid in maintaining a healthy weight
 - Improve overall well-being
+- Improve overall well-being
+
 
 ## Why should you choose to eat vegetables?
 - High in vitamins and minerals
