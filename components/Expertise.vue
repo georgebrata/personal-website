@@ -49,16 +49,24 @@
         Backend
       </h2>
       <ul class="mb-6 flex flex-wrap gap-4">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('python')">
+          <img class="w-8 h-10" src="~assets/devicon/python.png" title="Python logo" alt="Python logo" />
+          <span>Python</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('flask')">
+          <img class="w-8 h-10" src="~assets/devicon/flask.png" title="Flask logo" alt="Flask logo" />
+          <span>Flask</span>
+        </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('node.js')">
           <Node class="h-9 w-11" alt="Node title" title="Node logo"></Node>
           <span>Node.js</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('express')">
-          <Express class="h-9 w-11" alt="Express title" title="Express logo"></Express>
+          <img class="w-8 h-10" src="~assets/devicon/express.png" title="Express logo" alt="Express logo" />
           <span>Express.js</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('sequalize')">
-          <Sequalize class="h-9 w-11" alt="Sequalize title" title="Sequalize logo"></Sequalize>
+          <img class="w-8 h-10" src="~assets/devicon/sequalize.png" title="Sequalize logo" alt="Sequalize logo" />
           <span>Sequalize</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('laravel')">
@@ -135,8 +143,6 @@
   import Laravel from "../assets/devicon/laravel.svg?inline";
   import Node from "../assets/devicon/node.svg?inline";
   import Invision from "../assets/devicon/invision.svg?inline";
-  import Sequalize from "../assets/devicon/invision.svg?inline";
-  import Express from "../assets/devicon/invision.svg?inline";
 
   export default {
     components: {
@@ -149,9 +155,7 @@
       Nuxt,
       Laravel,
       Node,
-      Invision,
-      Sequalize,
-      Express
+      Invision
     },
     data() {
       return {
