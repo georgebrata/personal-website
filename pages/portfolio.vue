@@ -33,26 +33,28 @@
         API_URL: process.env.apiUrl.concat('?path=projects')
       };
     },
-    head: {
-      title: "Portfolio | George Brata",
-      meta: [{
-          charset: "utf-8"
-        },
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1"
-        },
-        {
-          hid: "description",
-          name: "description",
-          content: "George Brata's Portfolio as a Web Developer",
-        },
-      ],
-      link: [{
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico"
-      }],
+    head() {
+      return {
+        title: "Portfolio | George Brata",
+        meta: [{
+            charset: "utf-8"
+          },
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1"
+          },
+          {
+            hid: "description",
+            name: "description",
+            content: "George Brata's Portfolio as a Web Developer",
+          },
+        ],
+        link: [{
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/favicon.ico"
+        }],
+      }
     },
     async fetch() {
       let items = await fetch(this.API_URL).then(res => res.json());

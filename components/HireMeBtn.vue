@@ -9,7 +9,13 @@
 import siteMetaInfo from "@/data/sitemetainfo";
 
 export default {
-  props: ["fullwidth"],
+  name: "HireMeBtn",
+  props: {
+    fullwidth: {
+      type: Boolean,
+      default: false,
+    },
+  },
     data: () => {
     return {
       siteMetadata: siteMetaInfo,

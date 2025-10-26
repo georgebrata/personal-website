@@ -10,12 +10,13 @@
       </div>
     </div>
     <p class="mt-8 mb-4 dark:bg-gray-800 dark:text-blue-200 text-justify" v-for="i in items" :key="i.id">
-      <span v-html="i.description"></span>
+      {{ i.description }}
     </p>
   </div>
 </template>
 <script>
 export default {
+  name: "AuthorIntro",
   data: () => {
     return {
       items: [],

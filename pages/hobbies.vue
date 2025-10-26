@@ -94,26 +94,28 @@
                 API_URL: process.env.apiUrl.concat('?path=hobbies')
             };
         },
-        head: {
-            title: "George Brata | Hobbies",
-            meta: [{
-                    charset: "utf-8"
-                },
-                {
-                    name: "viewport",
-                    content: "width=device-width, initial-scale=1"
-                },
-                {
-                    hid: "description",
-                    name: "description",
-                    content: "What keeps me busy in my spare time?",
-                },
-            ],
-            link: [{
-                rel: "icon",
-                type: "image/x-icon",
-                href: "/favicon.ico"
-            }],
+        head() {
+            return {
+                title: "George Brata | Hobbies",
+                meta: [{
+                        charset: "utf-8"
+                    },
+                    {
+                        name: "viewport",
+                        content: "width=device-width, initial-scale=1"
+                    },
+                    {
+                        hid: "description",
+                        name: "description",
+                        content: "What keeps me busy in my spare time?",
+                    },
+                ],
+                link: [{
+                    rel: "icon",
+                    type: "image/x-icon",
+                    href: "/favicon.ico"
+                }],
+            };
         },
         async fetch() {
             this.items = await fetch(this.API_URL).then(res => res.json());

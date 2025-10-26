@@ -8,7 +8,20 @@
 
 <script>
 export default {
-  props: ["file", "name", "fullwidth"],
+  props: {
+    file: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    fullwidth: {
+      type: Boolean,
+      default: false,
+    },
+  },
   methods: {
     downloadFile() {
       const me = this;

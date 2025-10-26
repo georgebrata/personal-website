@@ -145,6 +145,7 @@
   import Invision from "../assets/devicon/invision.svg?inline";
 
   export default {
+    name: "Expertise",
     components: {
       Javascript,
       Html,

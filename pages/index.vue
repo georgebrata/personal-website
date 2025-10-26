@@ -21,19 +21,19 @@ export default {
       siteMetaInfo: siteMetaInfo,
     };
   },
-  head: {
-    title: siteMetaInfo.title,
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: siteMetaInfo.description,
-      },
-    ],
+  head() {
+    return {
+      title: this.siteMetaInfo.title,
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content: this.siteMetaInfo.description,
+        },
+      ],
+    };
   },
 };
 </script>
-
-<style></style>

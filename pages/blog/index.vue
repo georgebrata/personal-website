@@ -58,18 +58,20 @@ export default {
       this.$refs.categories.scrollToIndex(i)
     },
   },
-  head: {
-    title: "George Brata | Blogs",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: "Its Solaiman's Pen and Paper to write ",
-      },
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+  head() {
+    return {
+      title: "George Brata | Blogs",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content: "Its Solaiman's Pen and Paper to write ",
+        },
+      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    };
   },
 };
 </script>

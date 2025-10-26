@@ -43,6 +43,7 @@
   import siteMetaInfo from "@/data/sitemetainfo";
   import BuyMeACoffee from "./BuyMeACoffee.vue";
   export default {
+    name: "TheFooter",
     data() {
       return {
         siteMetadata: siteMetaInfo,

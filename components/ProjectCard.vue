@@ -48,8 +48,8 @@
             </div>
           </div>
         </div>
-        <p class="prose text-gray-500 max-w-none dark:text-gray-400 mb-3" v-html="item.description">
-          
+        <p class="prose text-gray-500 max-w-none dark:text-gray-400 mb-3">
+          {{ item.description }}
         </p>
         <div class="flex flex-row justify-between">
           <div class="text-gray-400 text-sm font-extralight">
@@ -72,7 +72,13 @@ import Folder from "../assets/icon/folder.svg?inline";
 import External from "../assets/icon/external.svg?inline";
 import Github from "../assets/icon/github.svg?inline";
 export default {
-  props: ["item"],
+  name: "ProjectCard",
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
   components: { Folder, External, Github },
   data() {
     return {
@@ -86,5 +92,3 @@ export default {
   }
 };
 </script>
-
-<style></style>
