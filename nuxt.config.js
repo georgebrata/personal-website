@@ -23,9 +23,9 @@ export default {
             async: true,
             
         },
-        {
-            src: "js/ga.js",
-        },
+        // {
+        //     src: "js/ga.js",
+        // },
         // {
         //     src: "js/formilla.js",
         // },
@@ -33,7 +33,12 @@ export default {
           src: "https://cdn.counter.dev/script.js",
           'data-utcoffset': "2",
           'data-id': "03bd5925-48e2-4d33-ae59-d66aaf6acba0",
-        }
+        },
+        {
+            src: "https://analytics.ahrefs.com/analytics.js",
+            'data-key': "XdD5VsqZhvDClf06D7i78g",
+            async: true
+        },
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
