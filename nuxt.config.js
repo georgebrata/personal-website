@@ -15,6 +15,7 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      { name: "msvalidate.01", content: "F34B5529CB256A10F983DCA266F526FB" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
@@ -38,12 +39,7 @@ export default {
             src: "https://analytics.ahrefs.com/analytics.js",
             'data-key': "XdD5VsqZhvDClf06D7i78g",
             async: true
-        },
-    {
-      hid: "msvalidate.01",
-      name: "msvalidate.01",
-      content: "F34B5529CB256A10F983DCA266F526FB"
-    },
+        }
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
