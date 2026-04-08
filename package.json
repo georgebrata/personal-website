@@ -11,7 +11,7 @@
     "generate": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "1.15.1",
+    "@nuxt/content": "3.8.2",
     "@tailwindcss/typography": "^0.5.2",
     "clipboard": "^2.0.10",
     "core-js": "^3.19.3",
