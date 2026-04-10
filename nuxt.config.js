@@ -39,7 +39,12 @@ export default {
             src: "https://analytics.ahrefs.com/analytics.js",
             'data-key': "XdD5VsqZhvDClf06D7i78g",
             async: true
-        }
+        },
+        // Clarity
+        {
+            src: "https://www.clarity.ms/tag/w9hepbyfua.js",
+            async: true
+        },
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
