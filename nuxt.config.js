@@ -42,7 +42,7 @@ export default {
         },
         // Clarity
         {
-            src: "https://www.clarity.ms/tag/w9hepbyfua.js",
+            src: "js/clarity.js",
             async: true
         },
     ]
