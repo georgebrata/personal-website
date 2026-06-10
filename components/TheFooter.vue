@@ -12,6 +12,7 @@
         >
         <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="i.href" v-for="i in items" :key="i.title">
             <span class="sr-only">{{i.title}}</span>
+            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.png"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'linkedin'" src="~assets/icon/linkeding.svg"/>
