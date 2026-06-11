@@ -10,7 +10,7 @@
           ><span class="sr-only">email</span>
           <img class="w-8 h-8" src="~assets/icon/mail.svg" /></a
         >
-        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="i.href" v-for="i in items" :key="i.title">
+        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="sanitizeHref(i.href)" v-for="i in items" :key="i.title">
             <span class="sr-only">{{i.title}}</span>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
@@ -63,6 +63,31 @@
         }
       })
       this.items = visibleItems;
+    },
+    methods: {
+      sanitizeHref(href) {
+        if (!href) return '#';
+        const trimmed = href.trim();
+        if (trimmed.startsWith('//') || /^\s*\/\//.test(trimmed)) {
+          return '#';
+        }
+        if (trimmed.startsWith('/') || trimmed.startsWith('#')) {
+          return trimmed;
+        }
+        try {
+          const url = new URL(trimmed, 'http://local-base');
+          const allowedProtocols = ['http:', 'https:', 'mailto:'];
+          if (allowedProtocols.includes(url.protocol)) {
+            return trimmed;
+          }
+          return '#';
+        } catch (e) {
+          if (trimmed.startsWith('//') || /^\s*\/\//.test(trimmed)) {
+            return '#';
+          }
+          return '#';
+        }
+      },
     },
   };
 </script>
