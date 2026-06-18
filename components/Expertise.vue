@@ -38,6 +38,18 @@
           <Nuxt class="h-10 w-12"></Nuxt>
           <span>Nuxt.js</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <React class="h-10 w-12"></React>
+          <span>React</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Nextjs class="h-10 w-12"></Nextjs>
+          <span>Next.js</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Redux class="h-10 w-12"></Redux>
+          <span>Redux</span>
+        </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('ionic')">
           <img class="w-9 h-9" src="~assets/devicon/ionic.png" alt="Ionic logo" title="Ionic title" />
           <span>Ionic</span>
@@ -143,6 +155,9 @@
   import Laravel from "../assets/devicon/laravel.svg?inline";
   import Node from "../assets/devicon/node.svg?inline";
   import Invision from "../assets/devicon/invision.svg?inline";
+  import React from "../assets/devicon/react.svg?inline";
+  import Redux from "../assets/devicon/redux.svg?inline";
+  import Nextjs from "../assets/devicon/nextjs.svg?inline";
 
   export default {
     components: {
@@ -155,7 +170,10 @@
       Nuxt,
       Laravel,
       Node,
-      Invision
+      Invision,
+      React,
+      Redux,
+      Nextjs
     },
     data() {
       return {
