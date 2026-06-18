@@ -67,7 +67,7 @@
             return href;
           }
           return "#";
-        } catch (e) {
+        } catch {
           if (href.startsWith("/") || href.startsWith("#") || href.startsWith("mailto:")) {
             return href;
           }

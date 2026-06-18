@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const articles = await $content("articles")
       .only([
         "title",
