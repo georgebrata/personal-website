@@ -32,7 +32,7 @@ export default {
       
       let visibleArticles = articles.filter((article) => !article.draft);
       const latestArticle = visibleArticles.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-      visibleArticles.shift(1); // remove the latest article from the list
+      visibleArticles.shift(); // remove the latest article from the list
 
     const categories = [
       { name: 'VueJS' }, { name: 'Nuxt' }, { name: 'Gridsome' }, { name: 'VuePress' },
