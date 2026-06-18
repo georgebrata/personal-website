@@ -6,11 +6,11 @@
           class="text-sm text-gray-500 transition hover:text-gray-600"
           target="_blank"
           rel="noopener noreferrer"
-          :href="`mailto:${siteMetadata.email}`"
+          :href="sanitizeHref(`mailto:${siteMetadata.email}`)"
           ><span class="sr-only">email</span>
           <img class="w-8 h-8" src="~assets/icon/mail.svg" /></a
         >
-        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="i.href" v-for="i in items" :key="i.title">
+        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="sanitizeHref(i.href)" v-for="i in items" :key="i.title">
             <span class="sr-only">{{i.title}}</span>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
             <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="flex mb-2 mt-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
-        <div>Copyright © {{ new Date().getFullYear() }} • <a :href="siteMetadata.siteUrl">{{ siteMetadata.author }}</a
+        <div>Copyright © {{ new Date().getFullYear() }} • <a :href="sanitizeHref(siteMetadata.siteUrl)">{{ siteMetadata.author }}</a
           ></div>       
         </div>
         <div class="mb-8 text-sm text-gray-500 dark:text-gray-400">
@@ -53,6 +53,27 @@
     },
     components: {
       BuyMeACoffee
+    },
+    methods: {
+      sanitizeHref(href) {
+        if (!href) return "#";
+        const allowedProtocols = ["http:", "https:", "mailto:"];
+        try {
+          const url = new URL(href, "http://local-base");
+          if (allowedProtocols.includes(url.protocol)) {
+            return href;
+          }
+          if (href.startsWith("/") || href.startsWith("#")) {
+            return href;
+          }
+          return "#";
+        } catch (e) {
+          if (href.startsWith("/") || href.startsWith("#") || href.startsWith("mailto:")) {
+            return href;
+          }
+          return "#";
+        }
+      }
     },
     async fetch() {
       this.items = await fetch(this.API_URL).then(res => res.json());
