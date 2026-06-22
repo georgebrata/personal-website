@@ -54,6 +54,11 @@
     components: {
     },
     methods: {
+      /**
+       * Sanitizes a given URL string to ensure it uses safe protocols or is a local path.
+       * @param {string} href - The URL string to sanitize.
+       * @returns {string} The sanitized URL or '#' if unsafe.
+       */
       sanitizeHref(href) {
         if (!href) return "#";
         const allowedProtocols = ["http:", "https:", "mailto:"];

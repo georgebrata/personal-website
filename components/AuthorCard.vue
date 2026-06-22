@@ -128,6 +128,9 @@ export default {
     };
   },
   methods: {
+    /**
+     * Increments the clickIndex up to a maximum of 9, used for cycling through author images.
+     */
     incrementIndex() {
       const MAX = 9;
       if(this.clickIndex < MAX) {

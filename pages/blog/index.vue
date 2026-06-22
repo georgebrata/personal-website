@@ -55,6 +55,10 @@ export default {
     },
   },
   methods: {
+    /**
+     * Scrolls the categories carousel to a specific index.
+     * @param {number} i - The index of the category to scroll to.
+     */
     scrollToCategory(i) {
       this.$refs.categories.scrollToIndex(i)
     },

@@ -45,6 +45,11 @@ export default {
     };
   },
   methods: {
+    /**
+     * Converts a date string into a localized long format.
+     * @param {string|Date} date - The date to format.
+     * @returns {string} The formatted date string.
+     */
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
