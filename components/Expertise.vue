@@ -237,6 +237,11 @@
       };
     },
     methods: {
+      /**
+       * Retrieves a skill item from the items list if it matches the name and is marked as visible.
+       * @param {string} skill - The name of the skill to find.
+       * @returns {Object|null} The skill object if found and visible, otherwise null.
+       */
       get(skill) {
         let sIndex = this.items.findIndex(i => i.title.toLowerCase() === skill.toLowerCase());
         if(sIndex > -1 && this.items[sIndex].visible) {

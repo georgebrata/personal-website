@@ -79,10 +79,21 @@ export default {
     };
   },
   methods: {
+    /**
+     * Converts a date string into a localized long format.
+     * @param {string|Date} date - The date to format.
+     * @returns {string} The formatted date string.
+     */
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
     },
+    /**
+     * Truncates text to a maximum length and appends an ellipsis.
+     * @param {string} text - The text to truncate.
+     * @param {number} [maxLen=25] - The maximum length of the text.
+     * @returns {string} The truncated text.
+     */
     shorten(text, maxLen = 25) {
       return text.length > maxLen ? text.slice(0, maxLen) + "..." : text;
     },

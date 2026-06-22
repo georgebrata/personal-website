@@ -81,6 +81,12 @@ export default {
     };
   },
   methods: {
+    /**
+     * Returns a formatted stack item string at a given index.
+     * @param {Object} item - The project item object.
+     * @param {number} index - The index of the stack item to retrieve.
+     * @returns {string} The formatted stack item string or an empty string.
+     */
     getStackItemAtIndex(item, index) {
       return item.stack && item.stack.split(',')[index] ? " • " + item.stack.split(',')[index] : '';
     }
