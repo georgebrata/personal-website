@@ -84,6 +84,7 @@
         </div>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           :href="`mailto:${siteMetadata.email}`"
           class="text-gray-600 md:hidden mt-1 dark:text-blue-100"
         >
@@ -99,7 +100,7 @@
       </div>
       <div class="my-2 text-gray-600 flex dark:text-blue-100 mb-4">
         <Mail />
-        <a class="ml-2" target="_blank" :href="`mailto:${siteMetadata.email}`"> {{ siteMetadata.email }}</a>
+        <a class="ml-2" target="_blank" rel="noopener noreferrer" :href="`mailto:${siteMetadata.email}`"> {{ siteMetadata.email }}</a>
       </div>
       <HireMeBtn :fullwidth="true">Contact me</HireMeBtn>
 
