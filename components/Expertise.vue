@@ -54,9 +54,21 @@
           <img class="w-9 h-9" src="~assets/devicon/ionic.png" alt="Ionic logo" title="Ionic title" />
           <span>Ionic</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Nx class="h-10 w-12"></Nx>
+          <span>Nx</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Socketio class="h-10 w-12"></Socketio>
+          <span>Socket.io</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Storybook class="h-10 w-12"></Storybook>
+          <span>Storybook</span>
+        </li>
       </ul>
     </div>
-    <div class="mt-4" v-if="get('node.js') || get('laravel') || get('docker')">
+    <div class="mt-4" v-if="get('node.js') || get('laravel') || get('docker') || get('php')">
       <h2 class="mb-2 text-xl text-gray-700 font-bold dark:text-blue-200 capitalize">
         Backend
       </h2>
@@ -88,6 +100,10 @@
         <li class="flex flex-col text-transparent hover:text-black items-center w-12">
           <img class="w-10 h-8 my-1" src="~assets/devicon/docker.png" title="Docker logo" alt="Docker logo" v-if="get('docker')"/>
           <span>Docker</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Php class="h-9 w-11" alt="PHP title" title="PHP logo"></Php>
+          <span>PHP</span>
         </li>
       </ul>
     </div>
@@ -139,6 +155,26 @@
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/stripe.png" title="Stripe logo" alt="Stripe logo" />
           <span>Stripe</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Vercel class="h-9 w-11" alt="Vercel title" title="Vercel logo"></Vercel>
+          <span>Vercel</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Firebase class="h-9 w-11" alt="Firebase title" title="Firebase logo"></Firebase>
+          <span>Firebase</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Supabase class="h-9 w-11" alt="Supabase title" title="Supabase logo"></Supabase>
+          <span>Supabase</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Pocketbase class="h-9 w-11" alt="Pocketbase title" title="Pocketbase logo"></Pocketbase>
+          <span>Pocketbase</span>
+        </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+          <Jira class="h-9 w-11" alt="Jira title" title="Jira logo"></Jira>
+          <span>Jira</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -158,6 +194,15 @@
   import React from "../assets/devicon/react.svg?inline";
   import Redux from "../assets/devicon/redux.svg?inline";
   import Nextjs from "../assets/devicon/nextjs.svg?inline";
+  import Nx from "../assets/devicon/nx.svg?inline";
+  import Socketio from "../assets/devicon/socketio.svg?inline";
+  import Storybook from "../assets/devicon/storybook.svg?inline";
+  import Php from "../assets/devicon/php.svg?inline";
+  import Vercel from "../assets/devicon/vercel.svg?inline";
+  import Firebase from "../assets/devicon/firebase.svg?inline";
+  import Supabase from "../assets/devicon/supabase.svg?inline";
+  import Pocketbase from "../assets/devicon/pocketbase.svg?inline";
+  import Jira from "../assets/devicon/jira.svg?inline";
 
   export default {
     components: {
@@ -173,7 +218,16 @@
       Invision,
       React,
       Redux,
-      Nextjs
+      Nextjs,
+      Nx,
+      Socketio,
+      Storybook,
+      Php,
+      Vercel,
+      Firebase,
+      Supabase,
+      Pocketbase,
+      Jira
     },
     data() {
       return {
