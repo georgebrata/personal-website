@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: "BlogIndex",
   async asyncData({ $content }) {
     const articles = await $content("articles")
       .only([

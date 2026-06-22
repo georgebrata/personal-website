@@ -51,6 +51,7 @@
 
 <script>
 export default {
+  name: "TimeLine",
   data: () => {
     return {
       items: [],

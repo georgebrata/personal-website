@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: "BlogItem",
   props: ["item"],
   data() {
     return {

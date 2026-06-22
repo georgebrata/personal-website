@@ -205,6 +205,7 @@
   import Jira from "../assets/devicon/jira.svg?inline";
 
   export default {
+    name: "Expertise",
     components: {
       Javascript,
       Html,

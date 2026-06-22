@@ -9,6 +9,7 @@
 import siteMetaInfo from "@/data/sitemetainfo";
 
 export default {
+  name: "HireMeBtn",
   props: ["fullwidth"],
     data: () => {
     return {

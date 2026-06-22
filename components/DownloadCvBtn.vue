@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: "DownloadCvBtn",
   props: ["file", "name", "fullwidth"],
   methods: {
     downloadFile() {
