@@ -38,15 +38,15 @@
           <Nuxt class="h-10 w-12"></Nuxt>
           <span>Nuxt.js</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('react')">
           <React class="h-10 w-12"></React>
           <span>React</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('next.js')">
           <Nextjs class="h-10 w-12"></Nextjs>
           <span>Next.js</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('redux')">
           <Redux class="h-10 w-12"></Redux>
           <span>Redux</span>
         </li>
@@ -85,57 +85,57 @@
           <Laravel class="h-9 w-11" alt="Laravel title" title="Laravel logo"></Laravel>
           <span>Laravel</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
-          <img class="w-10 h-8 my-1" src="~assets/devicon/docker.png" title="Docker logo" alt="Docker logo" v-if="get('docker')"/>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('docker')">
+          <img class="w-10 h-8 my-1" src="~assets/devicon/docker.png" title="Docker logo" alt="Docker logo" />
           <span>Docker</span>
         </li>
       </ul>
     </div>
-    <div class="mt-4">
+    <div class="mt-4" v-if="get('figma') || get('invision') || get('canva')">
       <h2 class="mb-2 text-xl text-gray-700 font-bold dark:text-blue-200 capitalize">
         Design
       </h2>
       <ul class="mb-6 flex flex-wrap gap-4">
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('figma')">
           <img class="w-8 h-10" src="~assets/devicon/figma.png" title="Figma logo" alt="Figma logo" />
           <span>Figma</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('invision')">
           <Invision class="h-9 w-11" alt="InVision title" title="InVision logo"></Invision>
           <span>InVision</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('canva')">
           <img class="h-9 w-10" src="~assets/devicon/canva.png" alt="Canva logo" title="Canva title" />
           <span>Canva</span>
         </li>
       </ul>
     </div>
-    <div class="mt-4">
+    <div class="mt-4" v-if="get('wordpress') || get('woocommerce') || get('glide') || get('manychat') || get('analytics') || get('stripe')">
       <h2 class="mb-2 text-xl text-gray-700 font-bold dark:text-blue-200 capitalize">
         Other tools
       </h2>
       <ul class="mb-6 flex flex-wrap gap-4">
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('wordpress')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/wordpress.png" title="Wordpress logo" alt="Wordpress logo" />
           <span>Wordpress</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('woocommerce')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/woocommerce.png" title="WooCommerce logo" alt="WooCommerce logo" />
           <span>WooCommerce</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('glide')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/glide.png" title="GlideApps logo" alt="GlideApps logo" />
           <span>Glide</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('manychat')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/manychat.png" title="Manychat logo" alt="Manychat logo" />
           <span>Manychat</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('analytics')">
           <img class="w-8 h-10 mb-2" src="~assets/devicon/google-analytics.png" title="Google Analytics logo" alt="Google Analytics logo" />
           <span>Analytics</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('stripe')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/stripe.png" title="Stripe logo" alt="Stripe logo" />
           <span>Stripe</span>
         </li>
