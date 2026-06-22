@@ -42,7 +42,6 @@
 
 <script>
   import siteMetaInfo from "@/data/sitemetainfo";
-  import BuyMeACoffee from "./BuyMeACoffee.vue";
   export default {
     name: "TheFooter",
     data() {
@@ -53,7 +52,6 @@
       };
     },
     components: {
-      BuyMeACoffee
     },
     methods: {
       sanitizeHref(href) {

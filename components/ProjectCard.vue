@@ -68,13 +68,10 @@
 </template>
 
 <script>
-import Folder from "../assets/icon/folder.svg?inline";
-import External from "../assets/icon/external.svg?inline";
-import Github from "../assets/icon/github.svg?inline";
 export default {
   name: "ProjectCard",
   props: ["item"],
-  components: { Folder, External, Github },
+  components: { },
   data() {
     return {
 
