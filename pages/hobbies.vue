@@ -87,6 +87,7 @@
 <script>
     // import projectsData from "../data/projects";
     export default {
+        name: "Hobbies",
         data() {
             return {
                 items: [],

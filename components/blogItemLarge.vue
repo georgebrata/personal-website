@@ -47,6 +47,7 @@
   
 <script>
 export default {
+  name: "BlogItemLarge",
   // props: ["title", "description", "date", "slug", "categories", "author", "image", "readingTime"],
   props: ["item"],
   data() {

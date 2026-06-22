@@ -65,6 +65,7 @@
 import Prism from "~/plugins/prism";
 import siteMetaInfo from "@/data/sitemetainfo";
 export default {
+  name: "BlogSlug",
   data() {
     return {
       title: 0,
