@@ -45,6 +45,7 @@
         </div>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           :href="siteMetadata.siteUrl"
           class="text-indigo-500 hover:text-indigo-600 dark:text-indigo-400"
         >
