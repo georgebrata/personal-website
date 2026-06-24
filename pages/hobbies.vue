@@ -119,7 +119,7 @@
             };
         },
         async fetch() {
-            this.items = await fetch(this.API_URL).then(res => res.json());
+            this.items = await fetch(this.API_URL).then(response => response.json());
         },
     };
 </script>

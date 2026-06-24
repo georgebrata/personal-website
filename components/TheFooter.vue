@@ -10,18 +10,18 @@
           ><span class="sr-only">email</span>
           <img class="w-8 h-8" src="~assets/icon/mail.svg" /></a
         >
-        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="sanitizeHref(i.href)" v-for="i in items" :key="i.title">
-            <span class="sr-only">{{i.title}}</span>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'linkedin'" src="~assets/icon/linkeding.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'twitter'" src="~assets/icon/twitter.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'youtube'" src="~assets/icon/youtube.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'github'" src="~assets/icon/github_new.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png"/>
+        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="sanitizeHref(item.href)" v-for="item in items" :key="item.title">
+            <span class="sr-only">{{item.title}}</span>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.png"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'linkedin'" src="~assets/icon/linkeding.svg"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'twitter'" src="~assets/icon/twitter.png"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'youtube'" src="~assets/icon/youtube.svg"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'github'" src="~assets/icon/github_new.svg"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.png"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.png"/>
+            <img class="w-8 h-8" v-if="item.title && item.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png"/>
         </a>
       </div>
       <div class="flex mb-2 mt-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
@@ -80,11 +80,11 @@
       }
     },
     async fetch() {
-      this.items = await fetch(this.API_URL).then(res => res.json());
+      this.items = await fetch(this.API_URL).then(response => response.json());
       let visibleItems = [];
-      this.items.forEach(i => {
-        if(i.visible) {
-          visibleItems.push(i);
+      this.items.forEach(item => {
+        if(item.visible) {
+          visibleItems.push(item);
         }
       })
       this.items = visibleItems;

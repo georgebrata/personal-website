@@ -12,18 +12,17 @@ export default {
   props: ["file", "name", "fullwidth"],
   methods: {
     downloadFile() {
-      const me = this;
-      fetch(me.file)
-        .then((resp) => resp.blob())
+      fetch(this.file)
+        .then((response) => response.blob())
         .then((blob) => {
           const url = window.URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.style.display = "none";
-          a.href = url;
+          const link = document.createElement("a");
+          link.style.display = "none";
+          link.href = url;
           // the filename you want
-          a.download = me.name || "BrataGeorgeCV.pdf";
-          document.body.appendChild(a);
-          a.click();
+          link.download = this.name || "BrataGeorgeCV.pdf";
+          document.body.appendChild(link);
+          link.click();
           window.URL.revokeObjectURL(url);
         })
         .catch(() => alert("oh no!"));
