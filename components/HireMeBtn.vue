@@ -16,8 +16,5 @@ export default {
       siteMetadata: siteMetaInfo,
     };
   },
-  methods: {
-    downloadFile() {},
-  },
 };
 </script>
