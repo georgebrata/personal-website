@@ -233,7 +233,7 @@
     data() {
       return {
         items: [],
-        API_URL: process.env.apiUrl + '?path=expertise'
+        API_URL: `${process.env.apiUrl}?path=expertise`
       };
     },
     methods: {

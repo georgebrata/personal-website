@@ -95,7 +95,7 @@ export default {
      * @returns {string} The truncated text.
      */
     shorten(text, maxLen = 25) {
-      return text.length > maxLen ? text.slice(0, maxLen) + "..." : text;
+      return text.length > maxLen ? `${text.slice(0, maxLen)}...` : text;
     },
   },
   mounted() {
