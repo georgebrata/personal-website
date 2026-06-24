@@ -2,7 +2,7 @@
   <div class="md:fixed">
     <div class="md:block flex justify-center items-center">
       <nuxt-img
-        :src="siteMetadata.author_image+'1.png'"
+        :src="`${siteMetadata.author_image}1.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -10,7 +10,7 @@
         v-show="clickIndex === 1"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'2.png'"
+        :src="`${siteMetadata.author_image}2.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -18,7 +18,7 @@
         v-show="clickIndex === 2"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'3.png'"
+        :src="`${siteMetadata.author_image}3.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -26,7 +26,7 @@
         v-show="clickIndex === 3"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'4.png'"
+        :src="`${siteMetadata.author_image}4.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -34,7 +34,7 @@
         v-show="clickIndex === 4"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'5.png'"
+        :src="`${siteMetadata.author_image}5.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -42,7 +42,7 @@
         v-show="clickIndex === 5"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'6.png'"
+        :src="`${siteMetadata.author_image}6.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -50,7 +50,7 @@
         v-show="clickIndex === 6"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'7.png'"
+        :src="`${siteMetadata.author_image}7.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -58,7 +58,7 @@
         v-show="clickIndex === 7"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'8.png'"
+        :src="`${siteMetadata.author_image}8.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
@@ -66,7 +66,7 @@
         v-show="clickIndex === 8"
       />
       <nuxt-img
-        :src="siteMetadata.author_image+'9.png'"
+        :src="`${siteMetadata.author_image}9.png`"
         loading="lazy"
         alt="me"
         class="md:h-60 md:w-60 h-40 w-40 rounded-full"

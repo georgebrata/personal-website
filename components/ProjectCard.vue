@@ -85,7 +85,7 @@ export default {
      * @returns {string} The formatted stack item string or an empty string.
      */
     getStackItemAtIndex(item, index) {
-      return item.stack && item.stack.split(',')[index] ? " • " + item.stack.split(',')[index] : '';
+      return item.stack && item.stack.split(',')[index] ? ` • ${item.stack.split(',')[index]}` : '';
     }
   }
 };

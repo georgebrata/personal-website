@@ -55,7 +55,7 @@ export default {
   data: () => {
     return {
       items: [],
-      API_URL: process.env.apiUrl.concat('?path=experience')
+      API_URL: `${process.env.apiUrl}?path=experience`
     };
   },
   async fetch() {
