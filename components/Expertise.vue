@@ -243,16 +243,16 @@
        * @returns {Object|null} The skill object if found and visible, otherwise null.
        */
       get(skill) {
-        let sIndex = this.items.findIndex(i => i.title.toLowerCase() === skill.toLowerCase());
-        if(sIndex > -1 && this.items[sIndex].visible) {
-          return this.items[sIndex];
+        let skillIndex = this.items.findIndex(item => item.title.toLowerCase() === skill.toLowerCase());
+        if(skillIndex > -1 && this.items[skillIndex].visible) {
+          return this.items[skillIndex];
         } else {
           return null;
         }
       }
     },
     async fetch() {
-      this.items = await fetch(this.API_URL).then(res => res.json());
+      this.items = await fetch(this.API_URL).then(response => response.json());
     },
   };
 </script>

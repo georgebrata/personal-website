@@ -57,8 +57,8 @@
         };
       },
       async fetch() {
-        let items = await fetch(this.API_URL).then(res => res.json());
-        this.items = items.filter(i => i.visible)
+        let items = await fetch(this.API_URL).then(response => response.json());
+        this.items = items.filter(item => item.visible)
       },
     };
   </script>

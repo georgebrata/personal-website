@@ -9,8 +9,8 @@
         <HireMeBtn class="block md:hidden">Contact me</HireMeBtn>
       </div>
     </div>
-    <p class="mt-8 mb-4 dark:bg-gray-800 dark:text-blue-200 text-justify" v-for="i in items" :key="i.id">
-      <span v-html="i.description"></span>
+    <p class="mt-8 mb-4 dark:bg-gray-800 dark:text-blue-200 text-justify" v-for="item in items" :key="item.id">
+      <span v-html="item.description"></span>
     </p>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     };
   },
   async fetch() {
-    this.items = await fetch(this.API_URL).then(res => res.json());
+    this.items = await fetch(this.API_URL).then(response => response.json());
   },
 };
 </script>
