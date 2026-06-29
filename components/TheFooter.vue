@@ -3,25 +3,82 @@
     <div class="flex flex-col items-center mt-8">
       <div class="flex flex-wrap justify-between mb-4 gap-4 space-x-4">
         <a
-          class="text-sm text-gray-500 transition hover:text-gray-600"
+          class="group relative text-sm text-gray-500 transition hover:text-gray-600"
           target="_blank"
           rel="noopener noreferrer"
           :href="sanitizeHref(`mailto:${siteMetadata.email}`)"
           ><span class="sr-only">email</span>
-          <img class="w-8 h-8" src="~assets/icon/mail.svg" /></a
+          <img class="w-8 h-8" src="~assets/icon/mail.svg" />
+          <span
+            class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap transform translate-y-2 group-hover:translate-y-0"
+          >
+            Email
+          </span>
+        </a>
+        <a
+          class="group relative text-sm text-gray-500 transition hover:text-gray-600"
+          target="_blank"
+          rel="noopener noreferrer"
+          :href="sanitizeHref(i.href)"
+          v-for="i in items"
+          :key="i.title"
         >
-        <a class="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" :href="sanitizeHref(i.href)" v-for="i in items" :key="i.title">
-            <span class="sr-only">{{i.title}}</span>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'linkedin'" src="~assets/icon/linkeding.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'twitter'" src="~assets/icon/twitter.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'youtube'" src="~assets/icon/youtube.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'github'" src="~assets/icon/github_new.svg"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.png"/>
-            <img class="w-8 h-8" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png"/>
+          <span class="sr-only">{{ i.title }}</span>
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'cursor'"
+            src="~assets/icon/cursor.svg"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'facebook'"
+            src="~assets/icon/facebook.svg"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'instagram'"
+            src="~assets/icon/instagram.png"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'linkedin'"
+            src="~assets/icon/linkeding.svg"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'twitter'"
+            src="~assets/icon/twitter.png"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'youtube'"
+            src="~assets/icon/youtube.svg"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'github'"
+            src="~assets/icon/github_new.svg"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'codepen'"
+            src="~assets/icon/codepen.png"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'bitbucket'"
+            src="~assets/icon/bitbucket.png"
+          />
+          <img
+            class="w-8 h-8"
+            v-if="i.title && i.title.toLowerCase() === 'leetcode'"
+            src="~assets/icon/leetcode.png"
+          />
+          <span
+            class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap transform translate-y-2 group-hover:translate-y-0"
+          >
+            {{ i.title }}
+          </span>
         </a>
       </div>
       <div class="flex mb-2 mt-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
