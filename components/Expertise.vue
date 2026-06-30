@@ -243,7 +243,7 @@
        * @returns {Object|null} The skill object if found and visible, otherwise null.
        */
       get(skill) {
-        let sIndex = this.items.findIndex(i => i.title.toLowerCase() === skill.toLowerCase());
+        const sIndex = this.items.findIndex(i => i.title.toLowerCase() === skill.toLowerCase());
         if(sIndex > -1 && this.items[sIndex].visible) {
           return this.items[sIndex];
         } else {

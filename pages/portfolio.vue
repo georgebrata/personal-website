@@ -57,7 +57,7 @@
       };
     },
     async fetch() {
-      let items = await fetch(this.API_URL).then(res => res.json());
+      const items = await fetch(this.API_URL).then(res => res.json());
       this.items = items.filter(i => i.visible)
     },
   };
