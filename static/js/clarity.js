@@ -1,5 +1,12 @@
-(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src=`https://www.clarity.ms/tag/${i}`;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w9hepbyfua");
+(function(windowRef, documentRef, clarityKey, scriptTag, projectId) {
+  windowRef[clarityKey] = windowRef[clarityKey] || function() {
+    (windowRef[clarityKey].q = windowRef[clarityKey].q || []).push(arguments);
+  };
+
+  const clarityScript = documentRef.createElement(scriptTag);
+  clarityScript.async = 1;
+  clarityScript.src = `https://www.clarity.ms/tag/${projectId}`;
+
+  const firstScript = documentRef.getElementsByTagName(scriptTag)[0];
+  firstScript.parentNode.insertBefore(clarityScript, firstScript);
+})(window, document, "clarity", "script", "w9hepbyfua");

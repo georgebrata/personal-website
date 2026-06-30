@@ -17,13 +17,13 @@ export default {
         .then((resp) => resp.blob())
         .then((blob) => {
           const url = window.URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.style.display = "none";
-          a.href = url;
+          const downloadLink = document.createElement("a");
+          downloadLink.style.display = "none";
+          downloadLink.href = url;
           // the filename you want
-          a.download = me.name || "BrataGeorgeCV.pdf";
-          document.body.appendChild(a);
-          a.click();
+          downloadLink.download = me.name || "BrataGeorgeCV.pdf";
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
           window.URL.revokeObjectURL(url);
         })
         .catch(() => alert("oh no!"));
