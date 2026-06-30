@@ -19,7 +19,7 @@ export default {
   name: "Index",
   data() {
     return {
-      siteMetaInfo: siteMetaInfo,
+      siteMetaInfo,
     };
   },
   head() {
