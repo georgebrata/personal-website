@@ -50,6 +50,7 @@
 </template>
 
 <script>
+/** Fetches timeline/experience items from the API. @returns {Promise<Array>} Resolves with an array of timeline items. */
 const fetchTimelineItems = () => fetch(`${process.env.apiUrl}?path=experience`).then(res => res.json());
 
 export default {

@@ -204,6 +204,7 @@
   import Pocketbase from "../assets/devicon/pocketbase.svg?inline";
   import Jira from "../assets/devicon/jira.svg?inline";
 
+  /** Fetches expertise items from the API. @returns {Promise<Array>} Resolves with an array of expertise items. */
   const fetchExpertiseItems = () => fetch(`${process.env.apiUrl}?path=expertise`).then(res => res.json());
 
   export default {

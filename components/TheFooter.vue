@@ -62,6 +62,7 @@
 <script>
 import siteMetaInfo from "@/data/sitemetainfo";
 
+/** Fetches social link items from the API. @returns {Promise<Array>} Resolves with an array of social link items. */
 const fetchSocialItems = () => fetch(process.env.apiUrl.concat("?path=socials")).then(res => res.json());
 
 export default {

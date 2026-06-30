@@ -15,6 +15,7 @@
   </div>
 </template>
 <script>
+/** Fetches author intro items from the API. @returns {Promise<Array>} Resolves with an array of intro items. */
 const fetchIntroItems = () => fetch(process.env.apiUrl.concat('?path=intro')).then(res => res.json());
 
 export default {
