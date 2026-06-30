@@ -204,6 +204,8 @@
   import Pocketbase from "../assets/devicon/pocketbase.svg?inline";
   import Jira from "../assets/devicon/jira.svg?inline";
 
+  const fetchExpertiseItems = () => fetch(`${process.env.apiUrl}?path=expertise`).then(res => res.json());
+
   export default {
     name: "Expertise",
     components: {
@@ -233,10 +235,20 @@
     data() {
       return {
         items: [],
-        API_URL: `${process.env.apiUrl}?path=expertise`
       };
     },
+    serverPrefetch() {
+      return this.loadItems();
+    },
+    mounted() {
+      if (!this.items.length) {
+        this.loadItems();
+      }
+    },
     methods: {
+      async loadItems() {
+        this.items = await fetchExpertiseItems();
+      },
       /**
        * Retrieves a skill item from the items list if it matches the name and is marked as visible.
        * @param {string} skill - The name of the skill to find.
@@ -250,9 +262,6 @@
           return null;
         }
       }
-    },
-    async fetch() {
-      this.items = await fetch(this.API_URL).then(res => res.json());
     },
   };
 </script>

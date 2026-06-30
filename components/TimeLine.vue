@@ -50,16 +50,27 @@
 </template>
 
 <script>
+const fetchTimelineItems = () => fetch(`${process.env.apiUrl}?path=experience`).then(res => res.json());
+
 export default {
   name: "TimeLine",
   data: () => {
     return {
       items: [],
-      API_URL: `${process.env.apiUrl}?path=experience`
     };
   },
-  async fetch() {
-    this.items = await fetch(this.API_URL).then(res => res.json());
+  serverPrefetch() {
+    return this.loadItems();
+  },
+  mounted() {
+    if (!this.items.length) {
+      this.loadItems();
+    }
+  },
+  methods: {
+    async loadItems() {
+      this.items = await fetchTimelineItems();
+    },
   },
 };
 </script>

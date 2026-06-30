@@ -25,12 +25,20 @@
 
 <script>
   // import projectsData from "../data/projects";
+  const fetchVisibleProjectItems = async () => {
+    const items = await fetch(process.env.apiUrl.concat('?path=projects')).then(res => res.json());
+    return items.filter(i => i.visible);
+  };
+
   export default {
     name: "Portfolio",
+    async asyncData() {
+      const items = await fetchVisibleProjectItems();
+      return { items };
+    },
     data() {
       return {
         items: [],
-        API_URL: process.env.apiUrl.concat('?path=projects')
       };
     },
     head() {
@@ -55,10 +63,6 @@
           href: "/favicon.ico"
         }],
       };
-    },
-    async fetch() {
-      const items = await fetch(this.API_URL).then(res => res.json());
-      this.items = items.filter(i => i.visible)
     },
   };
 </script>

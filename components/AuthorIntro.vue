@@ -15,16 +15,27 @@
   </div>
 </template>
 <script>
+const fetchIntroItems = () => fetch(process.env.apiUrl.concat('?path=intro')).then(res => res.json());
+
 export default {
   name: "AuthorIntro",
   data: () => {
     return {
       items: [],
-      API_URL: process.env.apiUrl.concat('?path=intro')
     };
   },
-  async fetch() {
-    this.items = await fetch(this.API_URL).then(res => res.json());
+  serverPrefetch() {
+    return this.loadItems();
+  },
+  mounted() {
+    if (!this.items.length) {
+      this.loadItems();
+    }
+  },
+  methods: {
+    async loadItems() {
+      this.items = await fetchIntroItems();
+    },
   },
 };
 </script>

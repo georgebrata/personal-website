@@ -62,13 +62,14 @@
 <script>
 import siteMetaInfo from "@/data/sitemetainfo";
 
+const fetchSocialItems = () => fetch(process.env.apiUrl.concat("?path=socials")).then(res => res.json());
+
 export default {
   name: "TheFooter",
   data() {
     return {
       siteMetadata: siteMetaInfo,
       items: [],
-      API_URL: process.env.apiUrl.concat("?path=socials"),
     };
   },
   computed: {
@@ -76,7 +77,19 @@ export default {
       return this.items.filter(i => this.hasPlatformIcon(i.title));
     },
   },
+  serverPrefetch() {
+    return this.loadItems();
+  },
+  mounted() {
+    if (!this.items.length) {
+      this.loadItems();
+    }
+  },
   methods: {
+    async loadItems() {
+      const items = await fetchSocialItems();
+      this.items = items.filter(i => i.visible);
+    },
     /**
      * Sanitizes a given URL string to ensure it uses safe protocols or is a local path.
      * @param {string} href - The URL string to sanitize.
@@ -149,18 +162,6 @@ export default {
       const normalizedTitle = title.toLowerCase();
       return platformNames[normalizedTitle] || title;
     },
-  },
-  async fetch() {
-    this.items = await fetch(this.API_URL).then(res => res.json());
-    const visibleItems = [];
-
-    this.items.forEach(i => {
-      if (i.visible) {
-        visibleItems.push(i);
-      }
-    });
-
-    this.items = visibleItems;
   },
 };
 </script>
