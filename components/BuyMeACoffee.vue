@@ -12,5 +12,3 @@ export default {
   name: "BuyMeACoffee",
 };
 </script>
-
-<style></style>
