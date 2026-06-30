@@ -19,7 +19,7 @@ export default {
   name: "Index",
   data() {
     return {
-      siteMetaInfo: siteMetaInfo,
+      siteMetaInfo,
     };
   },
   head() {
@@ -38,5 +38,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
