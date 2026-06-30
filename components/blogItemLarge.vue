@@ -48,8 +48,12 @@
 <script>
 export default {
   name: "BlogItemLarge",
-  // props: ["title", "description", "date", "slug", "categories", "author", "image", "readingTime"],
-  props: ["item"],
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       postTitle: this.item.title,

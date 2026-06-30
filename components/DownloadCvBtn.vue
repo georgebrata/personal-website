@@ -9,7 +9,20 @@
 <script>
 export default {
   name: "DownloadCvBtn",
-  props: ["file", "name", "fullwidth"],
+  props: {
+    file: {
+      type: String,
+      default: "",
+    },
+    name: {
+      type: String,
+      default: "BrataGeorgeCV.pdf",
+    },
+    fullwidth: {
+      type: Boolean,
+      default: false,
+    },
+  },
   methods: {
     downloadFile() {
       const me = this;
