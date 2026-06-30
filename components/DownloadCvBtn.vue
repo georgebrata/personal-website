@@ -26,7 +26,9 @@ export default {
           a.click();
           window.URL.revokeObjectURL(url);
         })
-        .catch(() => alert("oh no!"));
+        .catch((error) => {
+          console.error("Unable to download CV file", error);
+        });
     },
   },
 };
