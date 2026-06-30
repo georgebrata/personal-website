@@ -70,7 +70,12 @@
 <script>
 export default {
   name: "ProjectCard",
-  props: ["item"],
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
   components: { },
   data() {
     return {

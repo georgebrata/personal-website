@@ -31,7 +31,12 @@
 <script>
 export default {
   name: "BlogItem",
-  props: ["item"],
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       postTitle: this.item?.title,

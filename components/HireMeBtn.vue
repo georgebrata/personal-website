@@ -10,7 +10,12 @@ import siteMetaInfo from "@/data/sitemetainfo";
 
 export default {
   name: "HireMeBtn",
-  props: ["fullwidth"],
+  props: {
+    fullwidth: {
+      type: Boolean,
+      default: false,
+    },
+  },
     data: () => {
     return {
       siteMetadata: siteMetaInfo,
