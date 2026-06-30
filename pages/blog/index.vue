@@ -31,7 +31,7 @@ export default {
       .sortBy("date", "asc")
       .fetch();
       
-      let visibleArticles = articles.filter((article) => !article.draft);
+      const visibleArticles = articles.filter((article) => !article.draft);
       const latestArticle = visibleArticles.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
       visibleArticles.shift(); // remove the latest article from the list
 

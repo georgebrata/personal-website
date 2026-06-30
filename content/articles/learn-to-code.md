@@ -27,7 +27,7 @@ Learning how to code is always a good idea for the following reasons:
 Coding requires logical thinking and a structured approach to problem-solving. This process can significantly enhance your mental clarity and cognitive abilities. When you code, you break down complex problems into smaller, manageable tasks, which improves your analytical skills and ability to think systematically.
 
 ```js
-var foo = function (bar) {
+const foo = function (bar) {
   return bar++;
 };
 
