@@ -86,13 +86,17 @@
 
 <script>
     // import projectsData from "../data/projects";
+    const fetchHobbyItems = () => fetch(process.env.apiUrl.concat('?path=hobbies')).then(res => res.json());
+
     export default {
         name: "Hobbies",
+        async asyncData() {
+            const items = await fetchHobbyItems();
+            return { items };
+        },
         data() {
             return {
-                items: [],
                 activeIndex: Math.floor(Math.random() * 10) % 5,
-                API_URL: process.env.apiUrl.concat('?path=hobbies')
             };
         },
         head() {
@@ -117,9 +121,6 @@
                     href: "/favicon.ico"
                 }],
             };
-        },
-        async fetch() {
-            this.items = await fetch(this.API_URL).then(res => res.json());
         },
     };
 </script>
