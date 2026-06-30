@@ -6,8 +6,8 @@
       </h2>
       <ul class="flex flex-wrap gap-4 items-center">
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('html')">
-          <Html class="h-9 w-11 rounded-sm drop-shadow-sm">
-          </Html>
+          <HtmlIcon class="h-9 w-11 rounded-sm drop-shadow-sm">
+          </HtmlIcon>
           <span>HTML</span>
         </li>
         <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('css')">
@@ -182,7 +182,7 @@
 
 <script>
   import Javascript from "../assets/devicon/javascript.svg?inline";
-  import Html from "../assets/devicon/html.svg?inline";
+  import HtmlIcon from "../assets/devicon/html.svg?inline";
   import Css from "../assets/devicon/css.svg?inline";
   import Vuejs from "../assets/devicon/vuejs.svg?inline";
   import TailwindCss from "../assets/devicon/tailwindcss.svg?inline";
@@ -208,7 +208,7 @@
     name: "Expertise",
     components: {
       Javascript,
-      Html,
+      HtmlIcon,
       Css,
       Bootstrap,
       Vuejs,
