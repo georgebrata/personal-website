@@ -7,7 +7,7 @@ const siteMetaInfo = {
   location: "Romania",
   headerTitle: "georgebrata.ro",
   description:
-    "Do you need a cool, modern website that actually sells? Contact me!",
+    "Do you need a cool and modern website that actually sells? Contact me!",
   language: "en-us",
   theme: "dark", // system / dark / light
   siteUrl: "https://georgebrata.ro",
