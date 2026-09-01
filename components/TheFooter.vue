@@ -65,21 +65,21 @@ import siteMetaInfo from "@/data/sitemetainfo";
 /** Fetches social link items from the API. @returns {Promise<Array>} Resolves with an array of social link items. */
 const fetchSocialItems = () => fetch(process.env.apiUrl.concat("?path=socials")).then(res => res.json());
 
+/** Keeps only the social links flagged as visible. @param {Array} items - Social link items. @returns {Array} The visible items. */
+const selectVisibleItems = (items) => items.filter(i => i.visible);
+
 export default {
   name: "TheFooter",
   data() {
     return {
       siteMetadata: siteMetaInfo,
-      items: [],
+      items: selectVisibleItems(this.$store.state.socials),
     };
   },
   computed: {
     socialItemsWithIcons() {
       return this.items.filter(i => this.hasPlatformIcon(i.title));
     },
-  },
-  serverPrefetch() {
-    return this.loadItems();
   },
   mounted() {
     if (!this.items.length) {
@@ -88,8 +88,7 @@ export default {
   },
   methods: {
     async loadItems() {
-      const items = await fetchSocialItems();
-      this.items = items.filter(i => i.visible);
+      this.items = selectVisibleItems(await fetchSocialItems());
     },
     /**
      * Sanitizes a given URL string to ensure it uses safe protocols or is a local path.

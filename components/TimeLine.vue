@@ -55,13 +55,10 @@ const fetchTimelineItems = () => fetch(`${process.env.apiUrl}?path=experience`).
 
 export default {
   name: "TimeLine",
-  data: () => {
+  data() {
     return {
-      items: [],
+      items: this.$store.state.experience,
     };
-  },
-  serverPrefetch() {
-    return this.loadItems();
   },
   mounted() {
     if (!this.items.length) {

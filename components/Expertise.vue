@@ -235,11 +235,8 @@
     },
     data() {
       return {
-        items: [],
+        items: this.$store.state.expertise,
       };
-    },
-    serverPrefetch() {
-      return this.loadItems();
     },
     mounted() {
       if (!this.items.length) {

@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# Builds the site as a fully prerendered static bundle and publishes it over FTP.
 
 name: CI
 
@@ -11,7 +11,7 @@ on:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch: 
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,23 +25,51 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
 
       - name: Setup node env
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
-        
-      - name: Build project
-        run: npm run build
+        run: npm ci
 
-      - name: Generate
+      # `nuxt generate` runs its own production build before prerendering, so a
+      # separate `nuxt build` step would only duplicate the work.
+      - name: Generate static site
         run: npm run generate
 
-      - name: deploy
+      # Guards against shipping an empty SPA shell: Nuxt only writes
+      # `data-server-rendered="true"` into pages it actually prerendered.
+      - name: Verify prerendered output
+        run: |
+          set -euo pipefail
+
+          if [ ! -f dist/index.html ]; then
+            echo "::error::dist/index.html is missing - static generation did not run."
+            exit 1
+          fi
+
+          pages=$(find dist -name 'index.html' | wc -l | tr -d ' ')
+          prerendered=$(grep -rl 'data-server-rendered="true"' dist --include='index.html' | wc -l | tr -d ' ' || true)
+          echo "Prerendered $prerendered of $pages generated pages."
+
+          if [ "$prerendered" != "$pages" ]; then
+            echo "::error::Some pages were not prerendered."
+            exit 1
+          fi
+
+          # The footer is part of every page, so its API-driven links are the
+          # canary for build-time content being inlined rather than fetched.
+          if ! grep -q 'footer-social-link' dist/index.html; then
+            echo "::warning::No social links were prerendered - the content API may have been unreachable during the build."
+          fi
+
+      - name: Deploy
+        # Only publish real pushes to main; pull requests stop after the build.
+        if: github.event_name != 'pull_request'
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.georgebrata.ro

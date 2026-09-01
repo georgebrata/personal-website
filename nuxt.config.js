@@ -1,6 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  // `target: static` + `ssr: true` is what makes `nuxt generate` prerender every
+  // route to HTML and inline its data, instead of shipping an empty SPA shell.
+  ssr: true,
   env: {
     apiUrl: 'https://script.google.com/macros/s/AKfycbyadFq3Dre4OqZJf_0NcJ3qXRbdkFn1FFwUOAo2KX0YH8M3ICs7tR0D6FBMEUzts3E3/exec'
   },

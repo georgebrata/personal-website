@@ -20,13 +20,10 @@ const fetchIntroItems = () => fetch(process.env.apiUrl.concat('?path=intro')).th
 
 export default {
   name: "AuthorIntro",
-  data: () => {
+  data() {
     return {
-      items: [],
+      items: this.$store.state.intro,
     };
-  },
-  serverPrefetch() {
-    return this.loadItems();
   },
   mounted() {
     if (!this.items.length) {
