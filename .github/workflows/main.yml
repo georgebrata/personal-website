@@ -70,7 +70,7 @@ jobs:
       - name: Deploy
         # Only publish real pushes to main; pull requests stop after the build.
         if: github.event_name != 'pull_request'
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.georgebrata.ro
           username: deploy@georgebrata.ro
