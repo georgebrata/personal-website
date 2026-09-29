@@ -38,15 +38,15 @@
           <Nuxt class="h-10 w-12"></Nuxt>
           <span>Nuxt.js</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('react')">
           <React class="h-10 w-12"></React>
           <span>React</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('next.js')">
           <Nextjs class="h-10 w-12"></Nextjs>
           <span>Next.js</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('redux')">
           <Redux class="h-10 w-12"></Redux>
           <span>Redux</span>
         </li>
@@ -54,21 +54,25 @@
           <img class="w-9 h-9" src="~assets/devicon/ionic.png" alt="Ionic logo" title="Ionic title" />
           <span>Ionic</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('nx')">
           <Nx class="h-10 w-12"></Nx>
           <span>Nx</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('socket.io')">
           <Socketio class="h-10 w-12"></Socketio>
           <span>Socket.io</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('storybook')">
           <Storybook class="h-10 w-12"></Storybook>
           <span>Storybook</span>
         </li>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('tanstack')">
+          <Tanstack class="h-10 w-12"></Tanstack>
+          <span>TanStack</span>
+        </li>
       </ul>
     </div>
-    <div class="mt-4" v-if="get('node.js') || get('laravel') || get('docker') || get('php')">
+    <div class="mt-4" v-if="get('node.js') || get('laravel') || get('docker') || get('php') || get('python') || get('flask') || get('express') || get('sequalize')">
       <h2 class="mb-2 text-xl text-gray-700 font-bold dark:text-blue-200 capitalize">
         Backend
       </h2>
@@ -97,11 +101,11 @@
           <Laravel class="h-9 w-11" alt="Laravel title" title="Laravel logo"></Laravel>
           <span>Laravel</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
-          <img class="w-10 h-8 my-1" src="~assets/devicon/docker.png" title="Docker logo" alt="Docker logo" v-if="get('docker')"/>
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('docker')">
+          <img class="w-10 h-8 my-1" src="~assets/devicon/docker.png" title="Docker logo" alt="Docker logo" />
           <span>Docker</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('php')">
           <Php class="h-9 w-11" alt="PHP title" title="PHP logo"></Php>
           <span>PHP</span>
         </li>
@@ -112,15 +116,15 @@
         Design
       </h2>
       <ul class="mb-6 flex flex-wrap gap-4">
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('figma')">
           <img class="w-8 h-10" src="~assets/devicon/figma.png" title="Figma logo" alt="Figma logo" />
           <span>Figma</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('invision')">
           <Invision class="h-9 w-11" alt="InVision title" title="InVision logo"></Invision>
           <span>InVision</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('canva')">
           <img class="h-9 w-10" src="~assets/devicon/canva.png" alt="Canva logo" title="Canva title" />
           <span>Canva</span>
         </li>
@@ -131,47 +135,47 @@
         Other tools
       </h2>
       <ul class="mb-6 flex flex-wrap gap-4">
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('wordpress')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/wordpress.png" title="Wordpress logo" alt="Wordpress logo" />
           <span>Wordpress</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('woocommerce')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/woocommerce.png" title="WooCommerce logo" alt="WooCommerce logo" />
           <span>WooCommerce</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('glide')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/glide.png" title="GlideApps logo" alt="GlideApps logo" />
           <span>Glide</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('manychat')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/manychat.png" title="Manychat logo" alt="Manychat logo" />
           <span>Manychat</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('analytics')">
           <img class="w-8 h-10 mb-2" src="~assets/devicon/google-analytics.png" title="Google Analytics logo" alt="Google Analytics logo" />
           <span>Analytics</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('stripe')">
           <img class="w-8 h-8 mt-2 mb-2" src="~assets/devicon/stripe.png" title="Stripe logo" alt="Stripe logo" />
           <span>Stripe</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('vercel')">
           <Vercel class="h-9 w-11" alt="Vercel title" title="Vercel logo"></Vercel>
           <span>Vercel</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('firebase')">
           <Firebase class="h-9 w-11" alt="Firebase title" title="Firebase logo"></Firebase>
           <span>Firebase</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('supabase')">
           <Supabase class="h-9 w-11" alt="Supabase title" title="Supabase logo"></Supabase>
           <span>Supabase</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('pocketbase')">
           <Pocketbase class="h-9 w-11" alt="Pocketbase title" title="Pocketbase logo"></Pocketbase>
           <span>Pocketbase</span>
         </li>
-        <li class="flex flex-col text-transparent hover:text-black items-center w-12">
+        <li class="flex flex-col text-transparent hover:text-black items-center w-12" v-if="get('jira')">
           <Jira class="h-9 w-11" alt="Jira title" title="Jira logo"></Jira>
           <span>Jira</span>
         </li>
@@ -197,6 +201,7 @@
   import Nx from "../assets/devicon/nx.svg?inline";
   import Socketio from "../assets/devicon/socketio.svg?inline";
   import Storybook from "../assets/devicon/storybook.svg?inline";
+  import Tanstack from "../assets/devicon/tanstack.svg?inline";
   import Php from "../assets/devicon/php.svg?inline";
   import Vercel from "../assets/devicon/vercel.svg?inline";
   import Firebase from "../assets/devicon/firebase.svg?inline";
@@ -226,6 +231,7 @@
       Nx,
       Socketio,
       Storybook,
+      Tanstack,
       Php,
       Vercel,
       Firebase,
