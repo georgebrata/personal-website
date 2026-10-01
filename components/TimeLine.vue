@@ -13,17 +13,17 @@
           />
           <img
             class="w-3 h-3 text-blue-600 dark:text-blue-400"
-            src="~assets/icon/code-1.png"
+            src="~assets/icon/code-1.svg"
             v-if="i.icon === 'code1'"
           />
           <img
             class="w-3 h-3 text-blue-600 dark:text-blue-400"
-            src="~assets/icon/code-2.png"
+            src="~assets/icon/code-2.svg"
             v-if="i.icon === 'code2'"
           />
           <img
             class="w-3 h-3 text-blue-600 dark:text-blue-400"
-            src="~assets/icon/teach.png"
+            src="~assets/icon/teach.svg"
             v-if="i.icon === 'teach'"
           />
         </span>
