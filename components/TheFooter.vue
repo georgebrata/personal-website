@@ -27,16 +27,16 @@
           <span class="sr-only">{{ formatPlatformTitle(i.title) }}</span>
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'cursor'" src="~assets/icon/cursor.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'facebook'" src="~assets/icon/facebook.svg" />
-          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.png" />
+          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'instagram'" src="~assets/icon/instagram.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'linkedin'" src="~assets/icon/linkeding.svg" />
-          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'twitter'" src="~assets/icon/twitter.png" />
+          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'twitter'" src="~assets/icon/twitter.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'youtube'" src="~assets/icon/youtube.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'github'" src="~assets/icon/github_new.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && ['ko-fi', 'kofi'].includes(i.title.toLowerCase())" src="~assets/icon/kofi.svg" />
           <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && ['buymeacoffee', 'buy-me-a-coffee', 'buy me a coffee'].includes(i.title.toLowerCase())" src="~assets/icon/buymeacoffee.svg" />
-          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.png" />
-          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.png" />
-          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.png" />
+          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'codepen'" src="~assets/icon/codepen.svg" />
+          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'bitbucket'" src="~assets/icon/bitbucket.svg" />
+          <img class="footer-social-icon w-8 h-8" alt="" v-if="i.title && i.title.toLowerCase() === 'leetcode'" src="~assets/icon/leetcode.svg" />
         </a>
       </div>
 

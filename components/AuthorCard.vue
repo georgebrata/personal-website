@@ -1,78 +1,28 @@
 <template>
   <div class="md:fixed">
     <div class="md:block flex justify-center items-center">
-      <nuxt-img
-        :src="`${siteMetadata.author_image}1.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 1"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}2.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 2"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}3.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 3"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}4.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 4"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}5.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 5"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}6.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 6"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}7.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 7"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}8.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
-        @click="incrementIndex"
-        v-show="clickIndex === 8"
-      />
-      <nuxt-img
-        :src="`${siteMetadata.author_image}9.png`"
-        loading="lazy"
-        alt="me"
-        class="md:h-60 md:w-60 h-40 w-40 rounded-full"
-        @click="incrementIndex"
-        v-show="clickIndex === 9"
-      />
+      <picture v-for="index in 9" :key="index" v-show="clickIndex === index">
+        <source
+          type="image/avif"
+          :srcset="`/author/${index}-240.avif 240w, /author/${index}-480.avif 480w`"
+          sizes="(max-width: 768px) 160px, 240px"
+        />
+        <source
+          type="image/webp"
+          :srcset="`/author/${index}-240.webp 240w, /author/${index}-480.webp 480w`"
+          sizes="(max-width: 768px) 160px, 240px"
+        />
+        <img
+          :src="`/author/${index}-240.png`"
+          :srcset="`/author/${index}-240.png 240w, /author/${index}-480.png 480w`"
+          sizes="(max-width: 768px) 160px, 240px"
+          :loading="index === 1 ? 'eager' : 'lazy'"
+          :fetchpriority="index === 1 ? 'high' : 'auto'"
+          alt="me"
+          class="md:h-60 md:w-60 h-40 w-40 rounded-full cursor-pointer"
+          @click="incrementIndex"
+        />
+      </picture>
       <div class="sm:mx-7 ml-2 justify-center items-center">
         <h1
           class="md:text-2xl text-xl text-gray-800 font-bold dark:text-blue-100"
@@ -103,13 +53,6 @@
         <a class="ml-2" target="_blank" rel="noopener noreferrer" :href="`mailto:${siteMetadata.email}`"> {{ siteMetadata.email }}</a>
       </div>
       <HireMeBtn :fullwidth="true">Contact me</HireMeBtn>
-
-
-      <!-- 
-        <div class="my-2 text-gray-600 flex dark:text-blue-200">
-        <Github />
-        <a class="ml-2" :href="siteMetadata.github"> {{ siteMetadata.githubUser }}</a>
-      </div> -->
     </div>
   </div>
 </template>
@@ -132,11 +75,11 @@ export default {
      * Increments the clickIndex up to a maximum of 9, used for cycling through author images.
      */
     incrementIndex() {
-      const MAX = 9;
-      if(this.clickIndex < MAX) {
+      const maxIndex = 9;
+      if (this.clickIndex < maxIndex) {
         this.clickIndex = this.clickIndex + 1;
       } else {
-        this.clickIndex = MAX;
+        this.clickIndex = maxIndex;
       }
     }
   }
