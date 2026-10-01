@@ -38,6 +38,7 @@ export default {
           'data-utcoffset': "2",
           'data-id': "03bd5925-48e2-4d33-ae59-d66aaf6acba0",
           async: true,
+          defer: true,
         },
         {
             src: "https://analytics.ahrefs.com/analytics.js",
